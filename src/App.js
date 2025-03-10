@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useMemo, useState } from "react";
+import "./App.css";
+import Home from "./HomePage";
+import PropertyDetail from "./PropertyDetail";
+import UserContext from "./components/service/UserContext";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ImageGenerator from './components/imageGenerator';
 
-function App() {
+const App = () => {
+  const [user, setNewUser] = useState(null);
+  const providerValue = useMemo(
+    () => ({ user, setNewUser }),
+    [user, setNewUser]
+  );
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <UserContext.Provider value={providerValue}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/property/:id" element={<PropertyDetail />} />
+          </Routes>
+        </UserContext.Provider>
+      </BrowserRouter>
+      <h1>Image Generator</h1>
+      <ImageGenerator />
     </div>
   );
 }
