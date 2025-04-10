@@ -103,7 +103,7 @@ const Nav = () => {
             <div>
               {user ? (
                 <div className="user-container">
-                  <img className="user-icon" src="./assets/person.svg" /> Hello,{" "}
+                  <img className="user-icon" src="./assets/person.svg" alt="" /> Hello,{" "}
                   {user.name} {user.lastName}
                 </div>
               ) : (

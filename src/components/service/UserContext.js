@@ -1,8 +1,5 @@
 import { createContext } from "react";
 
-const UserContext = createContext({
-  user: null,
-  setNewUser: (val) => {},
-});
+const UserContext = createContext();
 
 export default UserContext;

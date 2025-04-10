@@ -5,12 +5,12 @@ const AddProperty = ({ onAddProperty }) => {
     {
       title: "Add new property",
       button: "Submit",
-      image: "/src/components/codeimage/homes.jpg",
+      image: "/assets/house 5.jpeg",
     },
   ];
 
   const [newProperty, setNewProperty] = useState({
-    imgSource: "https://pixabay.com/photos/real-estate-living-room-sofa-6893060/",
+    imgSource: "assets/new house.jpg",
     bedsCount: "",
     address: "",
     description: "",
@@ -86,7 +86,7 @@ const AddProperty = ({ onAddProperty }) => {
         </button>
       </form>
       <div>
-        <img className="add-property-img" src={a.image} />
+        <img className="add-property-img" src={a.image} alt="Add new property" />
       </div>
     </div>
   ));

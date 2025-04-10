@@ -7,7 +7,12 @@ import Booking from "./components/Booking";
 import Footer from "./components/Footer";
 
 class Home extends React.Component {
+  componentDidMount() {
+    console.log('Home component mounted'); // Debug log
+  }
+  
   render() {
+    console.log('Home component rendering'); // Debug log
     return (
       <div>
         <Nav />
@@ -15,10 +20,6 @@ class Home extends React.Component {
         <About />
         <Feature />
         <Booking />
-        <img 
-          src="https://pixabay.com/photos/property-house-real-estate-court-7046997/" 
-          alt="Real estate"
-        />
         <Footer />
       </div>
     );

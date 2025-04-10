@@ -45,7 +45,7 @@ const Login = () => {
       loginBtn: "Log in",
       forgotPsswordBtn: "Forgot Password",
       noAccount: "No account?",
-      image: "./assets/hero-image.png",
+      image: "/assets/hero-image.png",
     },
   ];
 
@@ -118,11 +118,11 @@ const Login = () => {
               <div className="login-links">
                 <div className="register-btn">
                   <p>
-                    {h.noAccount} <a href="#">{h.registerBtn}</a>
+                    {h.noAccount} <a href="mailto:example@example.com">{h.registerBtn}</a>
                   </p>
                 </div>
                 <div className="forgot-password">
-                  <a href="#">{h.forgotPsswordBtn}</a>
+                  <a href="mailto:example@example.com">{h.forgotPsswordBtn}</a>
                 </div>
               </div>
             </div>

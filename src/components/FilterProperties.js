@@ -1,22 +1,16 @@
 import React from "react";
 
-let FilterProperties = (props) => {
-  function onFilterValueChanged(e) {
-    // console.log(e.target.value);
-    props.filterValueSelected(e.target.value);
-  }
-
+function FilterProperties({ filterValueSelected }) {
   return (
-    <div className="specific-filter-area" onChange={onFilterValueChanged}>
-      <select className="bedrooms-list filter-select" name="bedCount">
-        <option value="-">how many bedrooms?</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-      </select>
+    <div className="filter-properties">
+      <img src="path/to/filter-icon.jpg" alt="Filter Icon" />
+      <button onClick={() => filterValueSelected("1")}>1 Bedroom</button>
+      <button onClick={() => filterValueSelected("2")}>2 Bedrooms</button>
+      <button onClick={() => filterValueSelected("3")}>3 Bedrooms</button>
+      <button onClick={() => filterValueSelected("4")}>4 Bedrooms</button>
+      <a href="/more-filters" alt="More Filters">More Filters</a>
     </div>
   );
-};
+}
 
 export default FilterProperties;

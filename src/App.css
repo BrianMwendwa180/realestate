@@ -62,6 +62,16 @@ html {
   font-family: "Montserrat", sans-serif;
 }
 
+/* DEBUG STYLES */
+#root, .App, body, html {
+  border: 2px solid red !important;
+  min-height: 100vh !important;
+}
+
+div, section, main, header, footer {
+  border: 1px solid blue !important;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
